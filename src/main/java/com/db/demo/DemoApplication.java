@@ -5,8 +5,9 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 public class DemoApplication {
 
 	@Autowired
@@ -19,10 +20,7 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@PostConstruct
-	public void init(){
-		shmRepo.save(new southernhemispheremonthly("1840-1", -0.44851005000));
-	}
+	
 	
 		}
 
