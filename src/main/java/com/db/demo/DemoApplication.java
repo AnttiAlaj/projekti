@@ -7,6 +7,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
+import com.db.demo.Repositories.UserRepository;
+import com.db.demo.Repositories.southernhmRepository;
+
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 public class DemoApplication {
 
