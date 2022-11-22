@@ -25,6 +25,7 @@ public class SecurityService {
         repo.save(u);
         return u;
     }
+
     public String login(String username, String password){
         BCryptPasswordEncoder enc = new BCryptPasswordEncoder();
 
@@ -51,4 +52,5 @@ public class SecurityService {
 
         return null;
     }
+
 }
